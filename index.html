@@ -4,8 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SW Florida Comfort HVAC | Air Conditioning & Heating Experts</title>
-    <meta name="description" content="SW Florida Comfort HVAC - Professional AC repair, installation, and maintenance in Southwest Florida. 24/7 emergency service. Call (239) XXX-XXXX.">
+    <meta name="description" content="SW Florida Comfort HVAC - Professional AC repair, installation, and maintenance in Southwest Florida. 24/7 emergency service. Call (239) 766-6129.">
     <meta name="keywords" content="HVAC, air conditioning, AC repair, heating, Naples, Fort Myers, Cape Coral, Florida, emergency AC">
+
+    <!-- Open Graph / Social Media Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.swfloridacomfort.com">
+    <meta property="og:title" content="SW Florida Comfort HVAC | Air Conditioning & Heating Experts">
+    <meta property="og:description" content="Professional AC repair, installation, and maintenance in Southwest Florida. 24/7 emergency service. Call (239) 766-6129.">
+    <meta property="og:image" content="https://www.swfloridacomfort.com/assets/logo-grok.png">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SW Florida Comfort HVAC | Air Conditioning & Heating Experts">
+    <meta name="twitter:description" content="Professional AC repair, installation, and maintenance in Southwest Florida. 24/7 emergency service.">
+
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HVACBusiness",
+      "name": "SW Florida Comfort HVAC",
+      "description": "Professional AC repair, installation, and maintenance in Southwest Florida",
+      "url": "https://www.swfloridacomfort.com",
+      "telephone": "+1-239-766-6129",
+      "email": "wmarceau@marceausolutions.com",
+      "founder": {
+        "@type": "Person",
+        "name": "William Marceau Sr."
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Naples",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        "Naples, FL",
+        "Fort Myers, FL",
+        "Cape Coral, FL",
+        "Bonita Springs, FL",
+        "Estero, FL",
+        "Marco Island, FL",
+        "Lehigh Acres, FL",
+        "Sanibel, FL"
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "16:30",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "08:00",
+          "closes": "17:00"
+        }
+      ],
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "3"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "HVAC Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AC Repair"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AC Installation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "HVAC Maintenance"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "24/7 Emergency Service"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+    <link rel="icon" type="image/png" href="/assets/logo-grok.png">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -542,8 +654,10 @@
                                 id="phone"
                                 name="phone"
                                 required
+                                pattern="[\(]?\d{3}[\)]?[\s\-]?\d{3}[\s\-]?\d{4}"
                                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                                 placeholder="(239) 555-1234"
+                                title="Please enter a valid phone number: (239) 555-1234"
                             >
                         </div>
                     </div>
@@ -605,6 +719,9 @@
                     <input type="hidden" name="business_id" value="swfloridacomfort">
                     <input type="hidden" name="timestamp" id="timestamp">
 
+                    <!-- Honeypot field for spam prevention (hidden from humans, visible to bots) -->
+                    <input type="text" name="website_url" value="" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true">
+
                     <div class="pt-4">
                         <button
                             type="submit"
@@ -615,7 +732,7 @@
                     </div>
 
                     <p class="text-center text-sm text-gray-500 mt-4">
-                        We'll contact you within 2 hours during business hours (8am-6pm Mon-Sat).
+                        We'll contact you within 2 hours during business hours (Mon-Fri 4:30pm-10pm, Sat-Sun 8am-5pm).
                         For emergencies, please call <a href="tel:+12397666129" class="text-primary font-semibold">(239) 766-6129</a>
                     </p>
                 </form>
@@ -687,7 +804,7 @@
                         Keeping Southwest Florida cool since day one. Licensed, insured, and committed to your comfort.
                     </p>
                     <p class="text-gray-500 text-sm">
-                        License #: CAC1234567 (placeholder)
+                        Licensed & Insured | EPA Certified
                     </p>
                 </div>
                 <div>
@@ -743,7 +860,7 @@
     </script>
 
     <!-- Form Handler -->
-    <script src="/assets/js/form-handler.js"></script>
+    <script src="/assets/js/form-handler.js" defer></script>
 
 </body>
 </html>
